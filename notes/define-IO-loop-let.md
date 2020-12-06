@@ -88,10 +88,26 @@ http://www.shido.info/lisp/scheme4_e.html
 
 It is basically a tail recursion.
 
+1. **name** name of the loop/function/lambda
+2. **binds** list of variable with initial value
+3. **body** to execute, contains
+   a. **predicate** (condition to exit) and return value
+   b. **procedure** which call `name` with next values
+
 ```lisp
 (let name ((variable init) ...)
   expression
   expression ...)
+```
+
+```lisp
+(let loop ((v1 0))
+  (if (< 2 v1)
+    v1
+    (begin
+      (display "Less than 2")
+      (newline)
+      (loop (+ v1 1)))))
 ```
 
 ### letrec
@@ -107,9 +123,11 @@ init ...)
 
 ### do
 
-1. list of variable with, initial value, expresion for next value
-2. predicate (condition to exit) and return value
-3. body to execute
+1. **binds** list of variable with
+   a. initial value
+   b. expresion for next value
+2. **predicate** (condition to exit) and return value
+3. **body** to execute
 
 ```lisp
 (do binds (predicate value)
