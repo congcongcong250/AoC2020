@@ -82,6 +82,8 @@ http://www.shido.info/lisp/scheme4_e.html
     exp1 exp2 ...) v1 v2)
 ```
 
+`let*` is a syntax sugar for nested let, variable list can refer prior one in order.
+
 ## Loop
 
 ### Named let
