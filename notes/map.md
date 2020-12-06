@@ -1,6 +1,13 @@
-# map
+# hashMap
 
 - `'()` is used as null in lisp
+- use `map` and `display` to display concatenated strings and numbers
+
+```lisp
+(map display
+ (list "Rolling " (- 5 (length my-rolled-dice))
+       " dice\nYou rolled\n" my-roll "\n"))
+```
 
 ## Create
 
