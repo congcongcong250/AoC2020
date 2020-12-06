@@ -10,13 +10,13 @@ http://www.shido.info/lisp/scheme4_e.html
 
 ### define function
 
-```lisp
+```scheme
 (define fhello
   (lambda ()
 	"Hello world"))
 ```
 
-```lisp
+```scheme
 (define hello
   (lambda (name)
     (string-append "Hello " name "!")))
@@ -26,14 +26,14 @@ http://www.shido.info/lisp/scheme4_e.html
 
 `(define (hello) "hello world")`
 
-```lisp
+```scheme
 (define (hello name)
     (string-append "Hello " name "!"))
 ```
 
 ### Load function
 
-```lisp
+```scheme
 (cd "./dir")
 
 (load "hello.scm")
@@ -53,7 +53,7 @@ http://www.shido.info/lisp/scheme4_e.html
 
 `call-with-input-file` passing port as an argument to lambda, requiring `close-input-port`
 
-```lisp
+```scheme
 (call-with-input-file file-name
     (lambda (p)
       (begin
@@ -65,7 +65,7 @@ http://www.shido.info/lisp/scheme4_e.html
 
 > the new port is made to be the value returned by current-input-port or current-output-port (as used by (read), (write obj), and so forth). The _thunk_ is then called with no arguments.
 
-```lisp
+```scheme
 (with-input-from-file FILE_NAME
   (lambda ()
     (display (read-line))))
@@ -75,9 +75,9 @@ http://www.shido.info/lisp/scheme4_e.html
 
 `let` is a syntax sugar of `lambda`, which is basically a IIFT in Javascript, which can achieve block scope variable (Local Variables).
 
-```lisp
+```scheme
 (let ((p1 v1) (p2 v2) ...) exp1 exp2 ...)
-⇒
+
 ((lambda (p1 p2 ...)
     exp1 exp2 ...) v1 v2)
 ```
@@ -96,13 +96,13 @@ It is basically a tail recursion.
    a. **predicate** (condition to exit) and return value
    b. **procedure** which call `name` with next values
 
-```lisp
+```scheme
 (let name ((variable init) ...)
   expression
   expression ...)
 ```
 
-```lisp
+```scheme
 (let loop ((v1 0))
   (if (< 2 v1)
     v1
@@ -114,7 +114,7 @@ It is basically a tail recursion.
 
 ### letrec
 
-```lisp
+```scheme
 ((letrec ((name
   (named-lambda (name variable ...)
     expression
@@ -131,7 +131,7 @@ init ...)
 2. **predicate** (condition to exit) and return value
 3. **body** to execute
 
-```lisp
+```scheme
 (do binds (predicate value)
     body)
 

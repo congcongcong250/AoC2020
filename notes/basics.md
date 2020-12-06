@@ -9,15 +9,23 @@
 
 http://www.shido.info/lisp/scheme2_e.html
 
-`(+ 1 2 3 4)` → 10\
-`(- 10 3)` → 7\
-`(- 10 3 5)` → 2\
-`(* 2 3)` → 6\
-`(* 2 3 4)` → 24\
-`(/ 29 3)` → 29/3\
-`(/ 29 3 7)` → 29/21\
-`(exact->inexact (/ 29 3 7))` → 1.380952380952381\
-`quotient`, `remainder`, `modulo`, `sqrt`\
+`(+ 1 2 3 4)` → 10
+
+`(- 10 3)` → 7
+
+`(- 10 3 5)` → 2
+
+`(* 2 3)` → 6
+
+`(* 2 3 4)` → 24
+
+`(/ 29 3)` → 29/3
+
+`(/ 29 3 7)` → 29/21
+
+`(exact->inexact (/ 29 3 7))` → 1.380952380952381
+
+`quotient`, `remainder`, `modulo`, `sqrt`
 
 ## Cons Cells and Lists
 
@@ -26,6 +34,7 @@ http://www.shido.info/lisp/scheme3_e.html
 Con cell = car + cdr (current value + next value)
 
 `(cons 1 (cons 2 3))` -> (1 2 .3)
+
 `(cons 1 (cons 2 (cons 3 '())))` -> (1 2 3) as a list
 
 `#\a` is character 'a'
@@ -39,9 +48,11 @@ Con cell = car + cdr (current value + next value)
 ### quote or `'`
 
 `(quote (+ 2 3))` or `'(+ 2 3)` represents a list (+ 2 3) itself.
+
 `(quote ())` or `'()` represents an empty list.
 
 `'(1 2 3)` or `(list 1 2 3)` -> (1 2 3)
+
 `'((1 2) (3 4))` or `(list '(1 2) '(3 4))` or `(list (list 1 2) (list 3 4))` -> ((1 2) (3 4))
 
 **Tip:** `'('(1 2) '(3 4))` is `((quote (1 2)) (quote (3 4)))`
