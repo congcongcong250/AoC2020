@@ -1,4 +1,5 @@
 (load "../fileIO.scm")
+(load "../util.scm")
 
 (define lines (read-lines "input.txt"))
 (define step 3)
@@ -11,7 +12,6 @@
         (let*
           ((lv (string->vector line))
             (j (modulo i (vector-length lv))))
-          (map display (list (vector-ref lv 0) (vector-ref lv 1) j))
           (if (eq? treeChar (vector-ref lv j))
             (set! s (+ s 1)))
           (set! i (+ i step))))
@@ -19,5 +19,5 @@
     s))
 
 (if (null? res)
-  (display "No result")
-  (map display (list "Result is " res)))
+  (log "No result")
+  (log "Result is " res))
