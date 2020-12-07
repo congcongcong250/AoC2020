@@ -44,3 +44,10 @@ https://groups.csail.mit.edu/mac/ftpdir/scheme-7.5/7.5.17/doc-html/scheme_3.html
     (newline)
     l)
 ```
+
+### caveat
+
+a
+(#!rest a)
+
+> These two examples are equivalent. a is a rest parameter. The procedure may be passed any number of arguments. Note: this is the only case in which ‘.’ cannot be used in place of ‘#!rest’.
