@@ -19,5 +19,5 @@
     s))
 
 (if (null? res)
-  (log "No result")
-  (log "Result is " res))
+  (print "No result")
+  (print "Result is " res))

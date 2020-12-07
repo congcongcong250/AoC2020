@@ -1,4 +1,5 @@
 (load "../fileIO.scm")
+(load "../util.scm")
 
 (define entries (map string->number (read-lines "input.txt")))
 
@@ -8,7 +9,7 @@
         (define v2 (hash-table/get entry-map v1 '()))
         (if (not (null? v2))
           (begin 
-            (log v1 v2)
+            (print v1 v2)
             (* v1 v2))
           (if (null? rest)
             '()
@@ -24,9 +25,9 @@
         (if (null? p1)
           (outer (car tail) (cdr tail))
           (begin 
-            (log v0 p1)
+            (print v0 p1)
             (* v0 p1)))))))
 
 (if (null? res)
-  (log "No result")
-  (log "Result is " res))
+  (print "No result")
+  (print "Result is " res))

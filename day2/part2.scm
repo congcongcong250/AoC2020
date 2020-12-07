@@ -1,4 +1,5 @@
 (load "../fileIO.scm")
+(load "../util.scm")
 
 (define entries (read-lines "input.txt"))
 
@@ -23,5 +24,5 @@
     valid))
 
 (if (null? res)
-  (log "No result")
-  (log "Result is " res))
+  (print "No result")
+  (print "Result is " res))

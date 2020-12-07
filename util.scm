@@ -1,4 +1,4 @@
-(define (log . l) 
+(define (print . l) 
     (map display l)
     (newline)
     l)

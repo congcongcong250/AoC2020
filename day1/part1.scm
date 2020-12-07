@@ -1,4 +1,5 @@
 (load "../fileIO.scm")
+(load "../util.scm")
 
 (define entries (map string->number (read-lines "input.txt")))
 (define res 
@@ -14,5 +15,5 @@
             (loop (car rest) (cdr rest))))))))
 
 (if (null? res)
-  (log "No result")
-  (log "Result is " res))
+  (print "No result")
+  (print "Result is " res))

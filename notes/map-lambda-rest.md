@@ -39,7 +39,7 @@ https://groups.csail.mit.edu/mac/ftpdir/scheme-7.5/7.5.17/doc-html/scheme_3.html
 (lambda (a #!optional o1 o2 #!rest e)
   ())
 
-(define (log . l)
+(define (print . l)
     (map display l)
     (newline)
     l)
