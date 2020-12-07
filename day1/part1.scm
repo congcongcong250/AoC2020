@@ -14,5 +14,5 @@
             (loop (car rest) (cdr rest))))))))
 
 (if (null? res)
-  (display "No result")
-  (map display (list "Result is " res)))
+  (log "No result")
+  (log "Result is " res))

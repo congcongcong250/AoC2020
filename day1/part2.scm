@@ -8,7 +8,7 @@
         (define v2 (hash-table/get entry-map v1 '()))
         (if (not (null? v2))
           (begin 
-            (map display (list v1 v2))
+            (log v1 v2)
             (* v1 v2))
           (if (null? rest)
             '()
@@ -24,9 +24,9 @@
         (if (null? p1)
           (outer (car tail) (cdr tail))
           (begin 
-            (map display (list v0 p1))
+            (log v0 p1)
             (* v0 p1)))))))
 
 (if (null? res)
-  (display "No result")
-  (map display (list "Result is " res)))
+  (log "No result")
+  (log "Result is " res))
