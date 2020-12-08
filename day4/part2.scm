@@ -8,7 +8,7 @@
 (load "../fileIO.scm")
 (load "../util.scm")
 
-(define lines (read-lines "valid.txt"))
+(define lines (read-lines "input.txt"))
 (define passports '())
 (define cur (make-equal-hash-table))
 
