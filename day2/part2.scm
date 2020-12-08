@@ -1,3 +1,7 @@
+; This attempt uses:
+;   - `vector` which is the array in scheme
+;     - `vector-ref`
+
 (load "../fileIO.scm")
 (load "../util.scm")
 

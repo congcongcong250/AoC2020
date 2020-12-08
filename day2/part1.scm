@@ -1,3 +1,11 @@
+; This attempt uses:
+;   - `for-each` over a list, way better
+;   - `let*` give a better structure of logic
+;     - one liners of local variables calculations in sequence 
+;     - except for every line you need to have a local variable
+;   - `string-splitter` is a constructor it returns a function
+;     - e.g. `(string-splitter 'delimiter #\-)`
+
 (load "../fileIO.scm")
 (load "../util.scm")
 

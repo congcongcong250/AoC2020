@@ -1,3 +1,13 @@
+; This attempt uses:
+;   - `(define)` global variable
+;   - `(define)` structure
+;     - `keyword-constructor` makes keyword-constructor possible
+;   - `(if)` expression
+;     - if the return value is undefined, it would be `#!unspecific` which is truthy
+;     - Explicitly return #t and #f to prevent bug
+;   - `(reduce)`
+;     -  `lambda(cur acc)` arguments passed into lambda is same as javascript
+
 (load "../fileIO.scm")
 (load "../util.scm")
 

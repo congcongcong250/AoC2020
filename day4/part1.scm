@@ -1,3 +1,9 @@
+; This attempt uses:
+;   - `(define)` a lot of global variables, NOT very maintainable
+;   - `(for-each)` with index manually kept track of
+;     - `keyword-constructor` makes keyword-constructor possible
+;   - `(begin expression expression ...)`
+
 (load "../fileIO.scm")
 (load "../util.scm")
 

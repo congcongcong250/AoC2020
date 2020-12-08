@@ -1,3 +1,9 @@
+; This attempt uses:
+;   - `vector-length`
+;     - `(length)` is for list length
+;     - `(string-length)` is for string length
+;     - etc
+
 (load "../fileIO.scm")
 (load "../util.scm")
 

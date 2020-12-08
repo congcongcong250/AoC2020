@@ -1,3 +1,10 @@
+; This attempt uses:
+;   - `let loop` over a list, it's a bit dum
+;     - `let loop ((v1  (car list)) (rest (cdr list)))`
+;     - `(loop (car rest) (cdr rest))`
+;   - `define` in a loop (?)
+;   - `hash-table`
+
 (load "../fileIO.scm")
 (load "../util.scm")
 
