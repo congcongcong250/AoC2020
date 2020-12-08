@@ -11,3 +11,4 @@
 (define (min a b) (if (< a b) a b))
 (define (max a b) (if (> a b) a b))
 
+(define call/cc call-with-current-continuation)
